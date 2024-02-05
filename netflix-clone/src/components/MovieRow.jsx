@@ -5,7 +5,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const MovieRow = ({ title, url }) => {
   const rowId = Math.floor(Math.random() * 1000);
-  const [movies, setMovies] = useState([url]);
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     axios.get(url).then((response) => setMovies(response.data.results));

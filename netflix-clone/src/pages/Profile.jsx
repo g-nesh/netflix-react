@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import { UserAuth } from "../context/AuthContext";
@@ -19,7 +19,21 @@ const Profile = () => {
   }, [user?.email]);
 
   // console.log(movies);
-  return <div>Profile</div>;
+
+  if (!user) {
+    <>
+      <p>fetching shows...</p>
+    </>;
+  }
+  return (
+    <>
+      <div>
+        <div>
+          <img src="" alt="//" />
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Profile;
