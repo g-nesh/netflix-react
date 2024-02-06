@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import Navbar from "./components/Navbar";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
             }
           />
         </Routes>
+        <Footer/>
       </AuthContextProvider>
     </>
   );
